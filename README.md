@@ -16,6 +16,12 @@
 brew bundle
 ```
 
+- Generate a Brewfile
+
+```
+brew bundle dump
+```
+
 - Clone this repository
 
 ```
@@ -28,3 +34,4 @@ cd ~/dotfiles
 ```
 stow .
 ```
+

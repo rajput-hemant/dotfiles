@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH="$HOME/.local/bin:$PATH"
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -113,6 +113,9 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# completions
+fpath+=~/.zfunc
+
 # bun completions
 [ -s "/Users/rajput-hemant/.bun/_bun" ] && source "/Users/rajput-hemant/.bun/_bun"
 
@@ -166,4 +169,18 @@ alias btop="btop --utf-force"
 alias n="nvim"
 alias t="tmux"
 alias tn="(){tmux new -s $1}"
+alias optpng='find . -name "*.png" -exec optipng {} \;'
+alias cv='compress_replace() { ffmpeg -i "$1" -vcodec libx264 -crf 24 -preset slow -acodec aac -b:a 128k temp_compressed.mov && mv temp_compressed.mov "$1"; }; compress_replace'
+
+# Added by Windsurf
+export PATH="/Users/rajput-hemant/.codeium/windsurf/bin:$PATH"
+
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/rajput-hemant/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
+
+# Added by Windsurf
+export PATH="/Users/rajput-hemant/.codeium/windsurf/bin:$PATH"
 
