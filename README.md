@@ -35,3 +35,16 @@ cd ~/dotfiles
 stow .
 ```
 
+## Mouse Gestures
+
+This repository includes a comprehensive mouse gestures setup for macOS using xGestures. The setup provides intuitive mouse gestures for window management and desktop navigation.
+
+📁 **Location**: [`mouse-gestures/`](./mouse-gestures/)
+
+🔗 **Full Documentation**: See [`mouse-gestures/README.md`](./mouse-gestures/README.md) for complete setup instructions, gesture descriptions, and download links.
+
+### Quick Overview
+- **Up**: Mission Control (show all windows)
+- **Down**: App Exposé (current app windows) 
+- **Left/Right**: Navigate between desktop spaces
+- **Rock gestures**: Show Desktop and Launchpad (manual setup required)

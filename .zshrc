@@ -32,7 +32,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ":omz:update" mode disabled  # disable automatic updates
-# zstyle ":omz:update" mode auto      # update automatically without asking
+zstyle ":omz:update" mode auto      # update automatically without asking
 # zstyle ":omz:update" mode reminder  # just remind me to update when it"s time
 
 # Uncomment the following line to change how often to auto-update (in days).
@@ -57,7 +57,7 @@ ENABLE_CORRECTION="true"
 # You can also set it to another string to have that shown instead of the default red dots.
 # e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
 # Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -116,9 +116,6 @@ source $ZSH/oh-my-zsh.sh
 # completions
 fpath+=~/.zfunc
 
-# bun completions
-[ -s "/Users/rajput-hemant/.bun/_bun" ] && source "/Users/rajput-hemant/.bun/_bun"
-
 # Config files aliases
 alias zshrc="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
@@ -135,6 +132,9 @@ alias scpd='sudo cp -R'
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# bun completions
+[ -s "/Users/rajput-hemant/.bun/_bun" ] && source "/Users/rajput-hemant/.bun/_bun"
 
 # Eza (better ls)
 alias ls="eza -al --color=always --group-directories-first --icons" # preferred listing
@@ -180,7 +180,3 @@ fpath=(/Users/rajput-hemant/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
-
-# Added by Windsurf
-export PATH="/Users/rajput-hemant/.codeium/windsurf/bin:$PATH"
-
